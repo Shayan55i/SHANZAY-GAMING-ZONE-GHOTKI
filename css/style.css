@@ -1,0 +1,2554 @@
+/* ==========================
+   SHANZAY GAMING ZONE
+   STYLE.CSS - PART 2A
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 70px;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#00e5ff;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#ffffff;
+}
+
+nav a{
+    text-decoration:none;
+    color:#ffffff;
+    margin-left:30px;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+    url("../images/hero-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:0 20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:68px;
+    color:#00e5ff;
+    line-height:1.2;
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 10px #00e5ff,
+    0 0 30px #00e5ff;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+    color:#eeeeee;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 42px;
+    border-radius:40px;
+    background:#00e5ff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.4s;
+    box-shadow:0 0 20px #00e5ff;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 35px #00e5ff;
+}
+
+/* ================= GAMES ================= */
+
+.games{
+    padding:100px 8%;
+    background:#111;
+}
+
+.games h2{
+    text-align:center;
+    font-size:45px;
+    color:#00e5ff;
+    margin-bottom:50px;
+}
+
+.game-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.game-card{
+    background:#181818;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.game-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00e5ff;
+}
+
+.game-card img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+}
+
+.game-card h3{
+    padding:20px;
+    text-align:center;
+    color:#ffffff;
+    font-size:20px;
+}
+/* ================= WHY US ================= */
+
+.why-us{
+    padding:100px 8%;
+    background:#0d0d0d;
+}
+
+.why-us h2{
+    text-align:center;
+    color:#00e5ff;
+    font-size:45px;
+    margin-bottom:60px;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.why-card{
+    background:#171717;
+    padding:40px 25px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+.why-card h3{
+    margin-bottom:20px;
+    color:#00e5ff;
+}
+
+.why-card p{
+    color:#cccccc;
+    line-height:1.8;
+}
+
+/* ================= TOURNAMENT ================= */
+
+.tournament{
+    padding:100px 8%;
+    background:#111;
+    text-align:center;
+}
+
+.tournament h2{
+    color:#00e5ff;
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.tournament-box{
+    max-width:700px;
+    margin:auto;
+    background:#181818;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,229,255,.15);
+}
+
+.tournament-box h3{
+    color:#ffffff;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.tournament-box p{
+    color:#cccccc;
+    font-size:20px;
+    margin-bottom:15px;
+}
+/* ===========================
+   PART 2C - RESPONSIVE & EFFECTS
+=========================== */
+
+/* Smooth Scrolling */
+html{
+    scroll-behavior:smooth;
+}
+
+/* Image Zoom Effect */
+.game-card{
+    overflow:hidden;
+}
+
+.game-card img{
+    transition:0.5s;
+}
+
+.game-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0d0d0d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00e5ff;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#00bcd4;
+}
+
+/* Selection Color */
+
+::selection{
+    background:#00e5ff;
+    color:#000;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+header{
+
+    flex-direction:column;
+
+    padding:20px;
+
+}
+
+nav{
+
+    margin-top:20px;
+
+}
+
+nav a{
+
+    margin:10px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.game-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.why-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.game-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.games h2,
+.why-us h2,
+.tournament h2{
+
+    font-size:32px;
+
+}
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.btn{
+
+    padding:14px 30px;
+
+}
+
+}
+/* ===========================
+   STATS SECTION
+=========================== */
+
+.stats{
+
+    background:#0b0b0b;
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-box{
+
+    background:#161616;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    border:1px solid rgba(0,229,255,.15);
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(0,229,255,.35);
+
+}
+
+.stat-box h2{
+
+    font-size:48px;
+
+    color:#00e5ff;
+
+    margin-bottom:15px;
+
+}
+
+.stat-box p{
+
+    color:#d9d9d9;
+
+    font-size:18px;
+
+}
+
+@media(max-width:992px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= ABOUT ================= */
+
+.about{
+
+    padding:100px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    background:#101010;
+
+}
+
+.about h2{
+
+    font-size:42px;
+
+    color:#00e5ff;
+
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    color:#cccccc;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.about-image img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 25px #00e5ff;
+
+}
+
+@media(max-width:900px){
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= AVAILABLE GAMES ================= */
+
+.available-games{
+    padding:100px 8%;
+    background:#0c0c0c;
+}
+
+.available-games h2{
+    text-align:center;
+    color:#00e5ff;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.available-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.available-card{
+    background:#181818;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    position:relative;
+}
+
+.available-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00e5ff;
+}
+
+.available-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.available-card h3{
+    padding:20px 20px 10px;
+    color:#00e5ff;
+}
+
+.available-card p{
+    padding:0 20px;
+    margin-bottom:10px;
+    color:#cccccc;
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    right:15px;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.new{
+    background:#00e5ff;
+    color:#000;
+}
+
+.hot{
+    background:#ff3b3b;
+    color:#fff;
+}
+
+@media(max-width:992px){
+.available-container{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.available-container{
+grid-template-columns:1fr;
+}
+}
+/* ===========================
+   TODAY'S RATES
+=========================== */
+
+.rates{
+
+    padding:100px 8%;
+
+    background:#101010;
+
+}
+
+.rates h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    color:#00e5ff;
+
+    margin-bottom:60px;
+
+}
+
+.rates-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.rate-card{
+
+    position:relative;
+
+    background:#181818;
+
+    border-radius:20px;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    border:1px solid rgba(0,229,255,.15);
+
+}
+
+.rate-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 30px rgba(0,229,255,.4);
+
+}
+
+.rate-card h3{
+
+    color:#00e5ff;
+
+    margin-bottom:25px;
+
+}
+
+.rate-card h1{
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+.rate-card p{
+
+    color:#cccccc;
+
+}
+
+.popular{
+
+    border:2px solid #00e5ff;
+
+}
+
+.popular-tag{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#00e5ff;
+
+    color:#000;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+@media(max-width:992px){
+
+.rates-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================
+   CUSTOMER REVIEWS
+=========================== */
+
+.reviews{
+
+    padding:100px 8%;
+
+    background:#0d0d0d;
+
+}
+
+.reviews h2{
+
+    text-align:center;
+
+    color:#00e5ff;
+
+    font-size:45px;
+
+    margin-bottom:60px;
+
+}
+
+.review-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.review-card{
+
+    background:#181818;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,229,255,.35);
+
+}
+
+.stars{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.review-card p{
+
+    color:#cccccc;
+
+    line-height:1.8;
+
+}
+
+.review-card h3{
+
+    color:#00e5ff;
+
+    margin-top:25px;
+
+}
+
+@media(max-width:992px){
+
+.review-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================
+   GAMING GALLERY
+=========================== */
+
+.gallery{
+
+    padding:100px 8%;
+
+    background:#111;
+
+}
+
+.gallery h2{
+
+    text-align:center;
+
+    color:#00e5ff;
+
+    font-size:45px;
+
+    margin-bottom:60px;
+
+}
+
+.gallery-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.1);
+
+}
+
+@media(max-width:992px){
+
+.gallery-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.gallery-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    padding:100px 8%;
+
+    background:#0b0b0b;
+
+}
+
+.contact h2{
+
+    text-align:center;
+
+    color:#00e5ff;
+
+    font-size:45px;
+
+    margin-bottom:60px;
+
+}
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.contact-info{
+
+    background:#181818;
+
+    padding:40px;
+
+    border-radius:20px;
+
+}
+
+.contact-info h3{
+
+    color:#00e5ff;
+
+    margin-bottom:25px;
+
+}
+
+.contact-info p{
+
+    color:#cccccc;
+
+    margin-bottom:18px;
+
+}
+
+.social-links{
+
+    margin-top:30px;
+
+}
+
+.social-links a{
+
+    display:inline-block;
+
+    margin-right:15px;
+
+    color:#00e5ff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.social-links a:hover{
+
+    color:#ffffff;
+
+}
+
+.contact-map iframe{
+
+    width:100%;
+
+    height:420px;
+
+    border:none;
+
+    border-radius:20px;
+
+}
+
+@media(max-width:900px){
+
+.contact-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================
+   WHATSAPP
+=========================== */
+
+.whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+text-decoration:none;
+
+color:#fff;
+
+box-shadow:0 0 20px #25D366;
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ===========================
+   TOP BUTTON
+=========================== */
+
+#topBtn{
+
+position:fixed;
+
+left:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00e5ff;
+
+color:#000;
+
+font-size:25px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 0 20px #00e5ff;
+
+z-index:999;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#080808;
+
+}
+
+footer h3{
+
+color:#00e5ff;
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+color:#aaa;
+
+margin-top:10px;
+
+}
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-content h1{
+
+    color:#00e5ff;
+
+    font-size:60px;
+
+}
+
+.loader-content h2{
+
+    color:#ffffff;
+
+    margin-top:10px;
+
+}
+
+.loading-bar{
+
+    width:250px;
+
+    height:8px;
+
+    background:#222;
+
+    margin-top:30px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.loading-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:#00e5ff;
+
+    animation:loading 2s linear forwards;
+
+}
+
+@keyframes loading{
+
+    100%{
+
+        width:100%;
+
+    }
+
+}
+/* ===========================
+   ANNOUNCEMENT BAR
+=========================== */
+
+.announcement{
+
+    width:100%;
+
+    background:#00e5ff;
+
+    color:#000;
+
+    padding:12px 0;
+
+    font-weight:bold;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:9999;
+
+}
+
+.announcement{
+
+    animation:marquee 18s linear infinite;
+
+}
+
+@keyframes marquee{
+
+    0%{
+
+        transform:translateX(100%);
+
+    }
+
+    100%{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+/* Header ko niche lao */
+
+header{
+
+    top:45px;
+
+}
+/* ===========================
+   COUNTDOWN
+=========================== */
+
+.countdown{
+
+    padding:100px 8%;
+
+    background:#0b0b0b;
+
+    text-align:center;
+
+}
+
+.countdown h2{
+
+    color:#00e5ff;
+
+    font-size:45px;
+
+}
+
+.countdown h3{
+
+    margin:20px 0;
+
+    font-size:35px;
+
+}
+
+.date{
+
+    color:#ccc;
+
+    margin-bottom:40px;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.timer div{
+
+    width:130px;
+
+    background:#181818;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.timer div:hover{
+
+    box-shadow:0 0 20px #00e5ff;
+
+}
+
+.timer span{
+
+    font-size:42px;
+
+    color:#00e5ff;
+
+    font-weight:bold;
+
+}
+
+.timer p{
+
+    margin-top:10px;
+
+    color:#ddd;
+
+}
+/* ===========================
+   GAMES PAGE
+=========================== */
+
+.games-page{
+    padding:140px 8% 80px;
+    background:#0b0b0b;
+    min-height:100vh;
+}
+
+.games-page h1{
+    text-align:center;
+    color:#00e5ff;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.games-page > p{
+    text-align:center;
+    color:#ccc;
+    margin-bottom:50px;
+}
+
+.games-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:10px;
+}
+
+.game-box{
+    background:#181818;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    padding-bottom:10px;
+}
+
+.game-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00e5ff;
+}
+
+.game-box img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.game-box h2{
+    color:#00e5ff;
+    padding:10px 10px 10px;
+}
+
+.game-box p{
+    color:#ddd;
+    padding:0 10px;
+    margin:7px 0;
+}
+
+.status{
+    display:inline-block;
+    margin:10px;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.available{
+    background:#22c55e;
+    color:#fff;
+}
+
+.hot{
+    background:#ef4444;
+    color:#fff;
+}
+
+.new{
+    background:#00e5ff;
+    color:#000;
+}
+.play-btn{
+
+    display:block;
+
+    width:85%;
+
+    margin:20px auto;
+
+    text-align:center;
+
+    padding:14px;
+
+    background:#00e5ff;
+
+    color:#000;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.play-btn:hover{
+
+    background:#fff;
+
+    box-shadow:0 0 20px #00e5ff;
+
+}
+/* ===========================
+   RATES PAGE
+=========================== */
+
+.rates-page{
+
+padding:140px 8%;
+
+background:#0b0b0b;
+
+min-height:100vh;
+
+}
+
+.rates-page h1{
+
+text-align:center;
+
+color:#00e5ff;
+
+margin-bottom:60px;
+
+font-size:50px;
+
+}
+
+.rates-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.rate-box{
+
+background:#181818;
+
+padding:50px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.rate-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px #00e5ff;
+
+}
+
+.rate-box h2{
+
+color:#00e5ff;
+
+margin-bottom:20px;
+
+}
+
+.rate-box h1{
+
+font-size:48px;
+
+margin-bottom:15px;
+
+}
+
+.rate-box p{
+
+color:#ccc;
+
+}
+/* ===========================
+   TOURNAMENT PAGE
+=========================== */
+
+.tournament-page{
+
+padding:140px 8%;
+background:#0b0b0b;
+min-height:100vh;
+text-align:center;
+
+}
+
+.tournament-page h1{
+
+color:#00e5ff;
+font-size:50px;
+margin-bottom:20px;
+
+}
+
+.tournament-page>p{
+
+color:#ccc;
+margin-bottom:50px;
+
+}
+
+.tournament-card{
+
+max-width:700px;
+margin:auto;
+background:#181818;
+padding:40px;
+border-radius:20px;
+transition:.4s;
+
+}
+
+.tournament-card:hover{
+
+box-shadow:0 0 25px #00e5ff;
+
+}
+
+.tournament-card h2{
+
+color:#00e5ff;
+margin-bottom:20px;
+
+}
+
+.tournament-card p{
+
+color:#ddd;
+margin:15px 0;
+
+}
+/* ===========================
+   TOURNAMENT COUNTDOWN
+=========================== */
+
+.tournament-countdown{
+
+display:flex;
+justify-content:center;
+gap:20px;
+margin:35px 0;
+flex-wrap:wrap;
+
+}
+
+.time-box{
+
+width:110px;
+background:#111;
+padding:20px;
+border-radius:15px;
+transition:.3s;
+
+}
+
+.time-box:hover{
+
+box-shadow:0 0 20px #00e5ff;
+
+}
+
+.time-box span{
+
+display:block;
+font-size:35px;
+font-weight:bold;
+color:#00e5ff;
+
+}
+
+.time-box p{
+
+margin-top:10px;
+color:#ccc;
+
+}
+/* ===========================
+   REGISTER FORM
+=========================== */
+
+.register-form{
+
+max-width:700px;
+
+margin:60px auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.register-form input,
+.register-form select,
+.register-form textarea{
+
+padding:18px;
+
+background:#181818;
+
+border:2px solid #333;
+
+border-radius:10px;
+
+color:#fff;
+
+font-size:16px;
+
+}
+
+.register-form textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+.register-form button{
+
+padding:18px;
+
+background:#00e5ff;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.register-form button:hover{
+
+background:#fff;
+
+box-shadow:0 0 20px #00e5ff;
+
+}
+/* ===========================
+   GALLERY PAGE
+=========================== */
+
+.gallery-page{
+
+padding:140px 8%;
+background:#0b0b0b;
+min-height:100vh;
+
+}
+
+.gallery-page h1{
+
+text-align:center;
+color:#00e5ff;
+font-size:50px;
+margin-bottom:20px;
+
+}
+
+.gallery-page p{
+
+text-align:center;
+color:#ccc;
+margin-bottom:50px;
+
+}
+
+.gallery-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+
+}
+
+.gallery-card{
+
+overflow:hidden;
+border-radius:20px;
+
+}
+
+.gallery-card img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+transition:.4s;
+
+}
+
+.gallery-card:hover img{
+
+transform:scale(1.08);
+
+}
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
+.contact-page{
+
+padding:140px 8%;
+background:#0b0b0b;
+min-height:100vh;
+text-align:center;
+
+}
+
+.contact-page h1{
+
+color:#00e5ff;
+font-size:50px;
+margin-bottom:50px;
+
+}
+
+.contact-box{
+
+background:#181818;
+padding:40px;
+border-radius:20px;
+max-width:700px;
+margin:0 auto 40px;
+
+}
+
+.contact-box h2{
+
+color:#00e5ff;
+margin-bottom:25px;
+
+}
+
+.contact-box p{
+
+color:#ddd;
+margin:18px 0;
+font-size:18px;
+
+}
+
+.contact-box i{
+
+color:#00e5ff;
+margin-right:10px;
+
+}
+
+.social-icons{
+
+margin-top:30px;
+
+}
+
+.social-icons a{
+
+display:inline-flex;
+justify-content:center;
+align-items:center;
+
+width:50px;
+height:50px;
+
+background:#111;
+
+border-radius:50%;
+
+margin:0 10px;
+
+color:#00e5ff;
+
+font-size:22px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+background:#00e5ff;
+color:#000;
+transform:translateY(-5px);
+
+}
+
+.map iframe{
+
+width:100%;
+height:450px;
+
+border:none;
+
+border-radius:20px;
+
+}
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
+.contact-page{
+
+padding:140px 8%;
+background:#0b0b0b;
+min-height:100vh;
+text-align:center;
+
+}
+
+.contact-page h1{
+
+color:#00e5ff;
+font-size:50px;
+margin-bottom:50px;
+
+}
+
+.contact-box{
+
+background:#181818;
+padding:40px;
+border-radius:20px;
+max-width:700px;
+margin:0 auto 50px;
+
+}
+
+.contact-box h2{
+
+color:#00e5ff;
+margin-bottom:25px;
+
+}
+
+.contact-box p{
+
+color:#ddd;
+margin:25px 0;
+font-size:25px;
+
+}
+
+.contact-box i{
+
+color:#00e5ff;
+margin-right:10px;
+
+}
+
+.social-icons{
+
+margin-top:30px;
+
+}
+
+.social-icons a{
+
+display:inline-flex;
+justify-content:center;
+align-items:center;
+
+width:70px;
+height:70px;
+
+background:#111;
+
+border-radius:60%;
+
+margin:0 20px;
+
+color:#00e5ff;
+
+font-size:40px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+background:#00e5ff;
+color:#000;
+transform:translateY(-5px);
+
+}
+
+.map iframe{
+
+width:100%;
+height:450px;
+
+border:none;
+
+border-radius:20px;
+
+}
+/* ===========================
+   ABOUT PAGE
+=========================== */
+
+.about-page{
+
+padding:140px 8%;
+background:#0b0b0b;
+min-height:100vh;
+
+}
+
+.about-page h1{
+
+text-align:center;
+color:#00e5ff;
+font-size:50px;
+margin-bottom:50px;
+
+}
+
+.about-content{
+
+max-width:900px;
+margin:auto;
+text-align:center;
+
+}
+
+.about-content h2{
+
+color:#00e5ff;
+margin-bottom:20px;
+
+}
+
+.about-content p{
+
+color:#ddd;
+font-size:18px;
+line-height:1.8;
+margin-bottom:20px;
+
+}
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:60px;
+
+}
+
+.feature-card{
+
+background:#181818;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 0 20px #00e5ff;
+
+}
+
+.feature-card h3{
+
+color:#00e5ff;
+margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+color:#ccc;
+
+}
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.menu-toggle{
+
+display:none;
+font-size:35px;
+color:#00e5ff;
+cursor:pointer;
+
+}
+
+@media(max-width:900px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+nav{
+
+display:none;
+flex-direction:column;
+position:absolute;
+top:80px;
+right:20px;
+background:#111;
+padding:20px;
+border-radius:15px;
+width:220px;
+
+}
+
+nav.active{
+
+display:flex;
+
+}
+
+nav a{
+
+margin:10px 0;
+
+}
+
+}
+/* ===========================
+   DARK / LIGHT MODE
+=========================== */
+
+.theme-btn{
+
+padding:10px 16px;
+
+border:none;
+
+border-radius:50px;
+
+background:#00e5ff;
+
+color:#000;
+
+font-size:20px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.theme-btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 15px #00e5ff;
+
+}
+
+/* Light Mode */
+
+body.light-mode{
+
+background:#f5f5f5;
+
+color:#111;
+
+}
+
+body.light-mode header{
+
+background:#ffffff;
+
+}
+
+body.light-mode .game-box,
+body.light-mode .rate-box,
+body.light-mode .feature-card,
+body.light-mode .review-card,
+body.light-mode .contact-box,
+body.light-mode .tournament-card{
+
+background:#ffffff;
+
+color:#111;
+
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3{
+
+color:#0099cc;
+
+}
+
+body.light-mode p{
+
+color:#333;
+
+}
+/* ===========================
+   LIGHTBOX
+=========================== */
+
+#lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.95);
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+#lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+    box-shadow:0 0 30px #00e5ff;
+}
+
+.close-lightbox{
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    z-index: 100000;
+}
+/* ===========================
+   HERO VIDEO
+=========================== */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.hero-video{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+z-index:-2;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+z-index:-1;
+
+}
+
+.hero-content{
+
+color:white;
+
+padding:20px;
+
+}
+
+.hero-content h1{
+
+font-size:45px;
+
+letter-spacing:3px;
+
+}
+
+.hero-content h2{
+
+font-size:75px;
+
+color:#00e5ff;
+
+margin:15px 0;
+
+text-shadow:0 0 20px #00e5ff;
+
+}
+
+.hero-content p{
+
+font-size:24px;
+
+margin-bottom:30px;
+
+}
+
+.hero-content .btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#00e5ff;
+
+color:#000;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.hero-content .btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px #00e5ff;
+
+}
+/* ===========================
+   CHAMPION SECTION
+=========================== */
+
+.champion-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:60px 0;
+}
+
+.champion-card{
+    width:580px;
+    background:#111;
+    border:5px solid #ffe600;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 0 20px rgba(0,229,255,0.4);
+    transition:0.3s;
+}
+
+.champion-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(0,229,255,0.8);
+}
+
+.champion-card img{
+    width:100%;
+    height:790px;
+    object-fit:cover;
+    border-radius:15px;
+    border:3px solid #00e5ff;
+}
+
+.champion-card h3{
+    font-size:32px;
+    color:#FFD700;
+    margin-top:20px;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+
+.champion-card p{
+    font-size:22px;
+    color:#fff;
+    font-weight:bold;
+    line-height:1.5;
+}
+/* ===========================
+   BOOKING CENTER
+=========================== */
+
+.booking-center{
+    width:90%;
+    max-width:1200px;
+    margin:150px auto 80px auto;
+    text-align:center;
+}
+
+.booking-center h2{
+    font-size:48px;
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+.booking-center p{
+    font-size:30px;
+    color:white;
+}
+
+.booking-grid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.booking-card{
+    width:350px;
+    background:#111;
+    border:2px solid #00e5ff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,229,255,.4);
+}
+
+.booking-card img{
+    width:220px;
+    height:220px;
+    object-fit:contain;
+}
+
+.booking-card h3{
+    font-size:30px;
+    color:#fff;
+    margin-top:20px;
+}
+
+.booking-card p{
+    font-size:18px;
+    color:#ddd;
+}
+
+.available{
+    color:#00ff66;
+    font-weight:bold;
+}
+
+.booking-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 35px;
+    background:#00e5ff;
+    color:#000;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.booking-btn:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+/* ===========================
+   BOOKING FORM
+=========================== */
+
+.booking-form{
+    width:90%;
+    max-width:700px;
+    margin:70px auto;
+    text-align:center;
+}
+
+.booking-form h2{
+    font-size:42px;
+    color:#00e5ff;
+    margin-bottom:30px;
+    text-shadow:0 0 10px #00e5ff;
+}
+
+.booking-box{
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("../images/ps5-bg1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    border:2px solid #00e5ff;
+    border-radius:20px;
+
+    padding:35px;
+}
+
+.booking-box input,
+.booking-box select{
+    width:100%;
+    padding:16px;
+    margin:12px 0;
+    border:2px solid #00e5ff;
+    border-radius:10px;
+    background:#1b1b1b;
+    color:#fff;
+    font-size:18px;
+    outline:none;
+    box-sizing:border-box;
+}
+
+.booking-box input:focus,
+.booking-box select:focus{
+    border-color:#00ff99;
+    box-shadow:0 0 10px #00ff99;
+}
+
+.book-btn{
+    width:100%;
+    margin-top:20px;
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    background:#25D366;
+    color:#fff;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.book-btn:hover{
+    transform:scale(1.03);
+    background:#1ebe5d;
+}
+
+@media(max-width:768px){
+
+    .booking-form h2{
+        font-size:32px;
+    }
+
+    .booking-box{
+        padding:20px;
+    }
+
+    .booking-box input,
+    .booking-box select{
+        font-size:16px;
+    }
+
+    .book-btn{
+        font-size:18px;
+    }
+
+}
